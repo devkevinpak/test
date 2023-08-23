@@ -3,6 +3,7 @@
   <HelloWorld msg="Welcome to Your Vue.js App" />
   <div class="">add sub main</div>
   <div class="">submit test 2</div>
+  <div class="">submit test 3</div>
 </template>
 
 <script>
