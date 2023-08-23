@@ -4,6 +4,7 @@
   <div class="">add sub main</div>
   <div class="">submit test 2</div>
   <div class="">submit test 3</div>
+  <div class="">submit test 4</div>
 </template>
 
 <script>
