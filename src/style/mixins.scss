@@ -1,0 +1,261 @@
+@use "sass:list";
+@use "sass:math";
+/* -----------------------------------
+    @fontface
+----------------------------------- */
+@mixin fontface ($family, $weight, $url, $range) {
+	@font-face {
+		font-family: $family;
+		font-weight: $weight;
+		src: url($url);
+		@if not ($range == null) {
+			@if $range == 'EN' {
+				unicode-range: U+0041-005A, U+0061-007A;
+			} @else if $range == 'KR' {
+				unicode-range: U+1100-11FF, U+3130-318F, U+AC00-D7AF;
+			} @else if $range == 'NUMBER' {
+				unicode-range: U+0030-0039;
+			} @else if $range == 'EN+NUMBER' {
+				unicode-range: U+0041-005A, U+0061-007A, U+0030-0039;
+			} @else if $range == 'KR+NUMBER' {
+				unicode-range: U+1100-11FF, U+3130-318F, U+AC00-D7AF, U+0030-0039;
+			} @else if $range == 'KR+ETC' {
+				unicode-range: U+1100-11FF, U+3130-318F, U+AC00-D7AF, U+2000-206F;
+			} @else if $range == 'EN+NUMBER+SYMBOL' {
+				unicode-range: U+0041-005A, U+0061-007A, U+0030-0039, U+2200-22FF, U+002C;
+			}
+		}
+	}
+}
+/* -----------------------------------
+    @responsive
+----------------------------------- */
+// @mixin breakpoint($name) {
+// 	@if $name == map-get($appname, aurora) {
+// 		@content;
+// 	} @else if $name == map-get($appname, ecarx) {
+// 		@content;
+// 	}
+// }
+@mixin breakpoint ($breakpoint-name) {
+	@media (min-width: map-get($breakpoint-name, minWidth)) and (max-width: map-get($breakpoint-name, maxWidth)) {
+		@content;
+	}
+	// @media (min-height: map-get($breakpoint-name, minHeightOnVK)) and (max-height: map-get($breakpoint-name, maxHeightOnVK)) {
+	// 	@content;
+	// }
+}
+/* -----------------------------------
+    @layout
+----------------------------------- */
+$grid: 12;
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	// align-items: center;
+	> .col {
+		flex: 0 0 auto;
+		min-height: 1px;
+		// transition: all 1s;
+	}
+	&.row_stretch {
+		> .col {flex: 1 1 auto;}
+	}
+}
+@for $i from 0 through 100 {
+	$gap: math.div($i, 2);
+	.row_gap_#{$i} {
+		margin-left: #{$gap  * -1} + 'px';
+		margin-right: #{$gap  * -1} + 'px';
+		> .col {
+			padding-left: #{$gap} + 'px';
+			padding-right: #{$gap} + 'px';
+		}
+	}
+}
+@for $i from 0 through 100 {
+	.row_mb_#{$i} {
+		> .col {
+			margin-bottom: #{$i} + 'px';
+		}
+		&.row_mb_remove_atLast {
+			> .col:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+@function col($colNum, $totalGridNumber) {
+	$layout: 100% * math.div($colNum, $totalGridNumber);
+	@return $layout;
+}
+@for $i from 0 through $grid {
+	.col_#{$i} {width: #{col($i, $grid)};}
+}
+@include breakpoint($sm) {
+	@for $i from 0 through $grid {
+		.col_sm_#{$i} {width: #{col($i, $grid)};}
+	}
+}
+@include breakpoint($md) {
+	@for $i from 0 through $grid {
+		.col_md_#{$i} {width: #{col($i, $grid)};}
+	}
+}
+@include breakpoint($lg) {
+	@for $i from 0 through $grid {
+		.col_lg_#{$i} {width: #{col($i, $grid)};}
+	}
+}
+@include breakpoint($xl) {
+	@for $i from 0 through $grid {
+		.col_xl_#{$i} {width: #{col($i, $grid)};}
+	}
+}
+@include breakpoint($sm) {
+	.sm_hidden {
+		display: none;
+	}
+	.sm_visible {
+		display: block;
+	}
+}
+
+/* custom width */
+@function blue($alpha) {
+	$color: rgba(35, 149, 255, $alpha);
+	@return $color;
+}
+/* -----------------------------------
+	@margin/padding
+----------------------------------- */
+@for $i from 0 through 60 {
+	.p#{$i} { padding: #{$i + 'px'} 0!important; }
+	.ptb#{$i} { padding: #{$i + 'px'} 0!important; }
+	.plr#{$i} { padding: 0 #{$i + 'px'}!important; }
+	.Pt#{$i} { padding-top: #{$i + 'px'}!important; }
+	.Pb#{$i} { padding-bottom: #{$i + 'px'}!important; }
+	.Pl#{$i} { padding-left: #{$i + 'px'}!important; }
+	.Pr#{$i} { padding-right: #{$i + 'px'}!important; }
+
+	.m#{$i} { margin: #{$i + 'px'} 0!important; }
+	.mtb#{$i} { margin: #{$i + 'px'} 0!important; }
+	.mlr#{$i} { margin: 0 #{$i + 'px'}!important; }
+	.mt#{$i} { margin-top: #{$i + 'px'}!important; }
+	.mb#{$i} { margin-bottom: #{$i + 'px'}!important; }
+	.ml#{$i} { margin-left: #{$i + 'px'}!important; }
+	.mr#{$i} { margin-right: #{$i + 'px'}!important; }
+}
+/* -----------------------------------
+	@scroll shadow
+----------------------------------- */
+// @mixin scrollShadowBottom($startColor, $endColor) {
+// 	content:"";
+// 	display: block;
+// 	position: absolute;
+// 	bottom: 0;
+// 	left: 0;
+// 	width: 100%;
+// 	height: 34px;
+// 	background: linear-gradient(to bottom, $startColor, $endColor);
+// 	pointer-events: none;
+// 	transition: all .4s;
+// }
+/* ----------------------------------------------------------------
+  @scrollbar
+-----------------------------------------------------------------*/
+::-webkit-scrollbar {
+	width: 0;
+}
+::-webkit-scrollbar-track {
+	background-color: transparent;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+// ::-webkit-scrollbar-track-piece {}
+::-webkit-scrollbar-thumb {
+	background-color: #ffae00;
+	background-clip: padding-box;
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	border-width: 0 0 0 8px;
+	border-style: solid;
+	border-color: transparent;
+}
+::-webkit-scrollbar-thumb:hover {
+	background-color:#ff7300;
+}
+::-webkit-scrollbar-button {
+	display: block;
+	height: 0;
+}
+// ::-webkit-scrollbar-corner {}
+
+/* -----------------------------------
+	@icon
+----------------------------------- */
+@mixin icon($url) {
+	background-image: url($url);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: auto;
+}
+/* -----------------------------------
+	@border dash
+----------------------------------- */
+// <svg><rect></rect></svg>형태
+// 사용시 부모에 relative 필수!
+// $borderWidth: borderwidth
+// $borderRadius: 모서리처리
+// $borderColor: 색상
+// $strokeOffset: 시작점 default: 0
+// $strokeArray: 선,공백 배열
+// 240117 : 다른 방식으로 대체
+@mixin borderDash ($borderWidth, $borderRadius, $borderColor, $strokeOffset, $strokeArray) {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	fill: transparent;
+	pointer-events: none;
+	>rect {
+		display: block;
+		width: 100%;
+		height: 100%;
+		stroke: if($borderColor, $borderColor, #{gray(.8)});
+		stroke-width: if($borderWidth, $borderWidth, 2px);
+		fill: transparent;
+		rx: if($borderRadius, $borderRadius, 0);
+		ry: if($borderRadius, $borderRadius, 0);
+		stroke-dashoffset: if($strokeOffset, $strokeOffset, 0);
+		stroke-dasharray: if($strokeArray, $strokeArray, 0);
+	}
+}
+/* -----------------------------------
+	@text
+----------------------------------- */
+@mixin font($size, $weight, $lineheight, $color) {
+	font-size: $size;
+	font-weight: if($weight, $weight, 400);
+	line-height: if($lineheight, $lineheight, 1.4);
+	color : if($color, $color, #fff);
+}
+@mixin ellipsis() {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space:nowrap;
+	word-break: break-all;
+}
+@mixin line-ellipsis($line-cnt) {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: $line-cnt; /* 라인수 */
+	-webkit-box-orient: vertical;
+	word-wrap: break-word;
+	word-break: break-all; // keep-all
+	white-space: normal;
+}

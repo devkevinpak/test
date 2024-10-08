@@ -1,0 +1,67 @@
+:root {
+	// 공통
+	--app-width: 1800px;
+}
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+	-webkit-user-drag: none;
+	user-select: none;
+	-webkit-tap-highlight-color: transparent;
+}
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	letter-spacing: -1px;
+}
+body {
+	position: relative;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+button {
+	border: 0;
+	padding-block: 0;
+	cursor: pointer;
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+	display: none;
+}
+:focus {
+	outline-color: transparent;
+	outline-style: none;
+}
+::selection {
+	background: transparent;
+}
+/* ----------------------------------------------------------------
+    @algin
+-----------------------------------------------------------------*/
+.text-left {
+	text-align: left!important;
+}
+.text-right {
+	text-align: right!important;
+}
+.text-center {
+	text-align: center!important;
+}
+.full-left {
+	float:left;
+}
+.full-right {
+	float:right;
+}

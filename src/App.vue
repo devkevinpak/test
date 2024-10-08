@@ -1,28 +1,36 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" :class="[getModelType, getTheme]">
+    <MainPage v-if="getIsLogin" />
+    <NeedLogin v-else/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import { mapGetters } from 'vuex'
+import { MainPage } from '@/components/main'
+import NeedLogin from '@/views/NeedLogin'
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
+    MainPage,
+    NeedLogin
+  },
+  computed: {
+    ...mapGetters([
+      'getIsLogin'
+    ]),
+    getModelType() {
+      return this.$app.state.modelType
+    },
+    getTheme() {
+      return this.$app.state.theme
+    }
+  },
+  methods: {
+
+  },
+  created () {
+    this.$store.commit('isLogin', true)
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

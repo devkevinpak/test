@@ -1,0 +1,148 @@
+/* -----------------------------------
+    @response
+----------------------------------- */
+$sm: (
+    minWidth: 0px,
+    maxWidth: 767px
+);
+$md: (
+    minWidth: 768px,
+    maxWidth: 991px
+);
+$lg: (
+    minWidth: 992px,
+    maxWidth: 1199px
+);
+$xl: (
+    minWidth: 1200px,
+    maxWidth: 9999px
+);
+
+/* -----------------------------------
+    @color
+----------------------------------- */
+@function blue($alpha) {
+    $color: rgba(35, 149, 255, $alpha);
+    @return $color;
+}
+@function lightblue($alpha) {
+    $color: rgba(115,161,240, $alpha);
+    @return $color;
+}
+@function darkblue($alpha) {
+    $color: rgba(55,66,83, $alpha);
+    @return $color;
+}
+@function white($alpha) {
+    $color: rgba(255, 255, 255, $alpha);
+    @return $color;
+}
+@function black($alpha) {
+    $color: rgba(0,0,0, $alpha);
+    @return $color;
+}
+@function semiwhite($alpha) {
+    $color: rgba(227, 229, 232, $alpha);
+    @return $color;
+}
+@function semilightgray($alpha) {
+    $color: rgba(163, 163, 163, $alpha);
+    @return $color;
+}
+@function ecarxGray01($alpha) {
+    $color: rgba(35, 35, 35, $alpha);
+    @return $color;
+}
+@function ecarxGray02($alpha) {
+    $color: rgba(31, 31, 31, $alpha);
+    @return $color;
+}
+@function ecarxGray07($alpha) {
+    $color: rgba(47, 47, 47, $alpha);
+    @return $color;
+}
+@function ecarxGray08($alpha) {
+    $color: rgba(162, 162, 162, $alpha);
+    @return $color;
+}
+@function ecarxGray09($alpha) {
+    $color: rgba(41, 41, 41, $alpha);
+    @return $color;
+}
+@function lightgray($alpha) {
+    $color: rgba(138, 138, 147, $alpha);
+    @return $color;
+}
+@function gray($alpha) {
+    $color: rgba(55, 56, 59, $alpha);
+    @return $color;
+}
+@function deepgray($alpha) {
+    $color: rgba(68, 68, 68, $alpha);
+    @return $color;
+}
+@function red($alpha) {
+    $color: rgba(230, 0, 0, $alpha);
+    @return $color;
+}
+@function orange($alpha) {
+    $color: rgba(191, 88, 0, $alpha);
+    @return $color;
+}
+@function lightorange($alpha) {
+    $color: rgba(255, 117, 0, $alpha);
+    @return $color;
+}
+@function ecarxOrange($alpha) {
+    $color: rgba(99, 49, 5, $alpha);
+    @return $color;
+}
+@function auroraBlue($alpha) {
+    $color: rgba(61, 139, 255, $alpha);
+    @return $color;
+}
+@function ecarxBlue($alpha) {
+    $color: rgba(74, 109, 168, $alpha);
+    @return $color;
+}
+@function ecarxGray($alpha) {
+    $color: rgba(58, 58, 58, $alpha);
+    @return $color;
+}
+@function ecarxlightGray($alpha) {
+    $color: rgba(177, 179, 179, $alpha);
+    @return $color;
+}
+@function ecarxdarkGray($alpha) {
+    $color: rgba(29, 30, 31, $alpha);
+    @return $color;
+}
+
+/* -----------------------------------
+    @border
+----------------------------------- */
+$app-border : 1px solid rgba(55, 56, 59, 1);
+
+/* -----------------------------------
+    @input
+----------------------------------- */
+$app-toggle-on: #{blue(1)};
+$app-toggle-off: #{gray(1)};
+$app-toggle-disable: .3;
+$app-toggle-loading: .6;
+
+$app-range-color: #{blue(1)};
+$app-range-track-color: rgba(255, 255, 255, 0.12);
+$app-range-thumb-color: #{white(1)};
+
+/* -----------------------------------
+    @pannel,box,board,popup
+----------------------------------- */
+$app-pannel-bg: rgba(27, 28, 30, 1);
+
+/* -----------------------------------
+    @transition
+----------------------------------- */
+$app-transition: all .4s;
+
+// unquote("test");

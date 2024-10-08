@@ -1,0 +1,26 @@
+#app.theme-day {
+  // theme (day)
+  --theme-color: #333;
+  --theme-background-color: #fff;
+
+  --theme-button-color: #4f89ee;
+  --theme-button-border-color: #4f89ee;
+
+  --theme-background-color-sidemenu: #3d3d92;
+  --theme-button-color-sidemenu: #fff;
+}
+#app.theme-night {
+  // theme (night)
+  --theme-color: #fff;
+  --theme-background-color-default: #444;
+
+  --theme-button-color: #ffb03a;
+  --theme-button-border-color: #ffb03a;
+
+  --theme-background-color-sidemenu: #111;
+  --theme-button-color-sidemenu: #fff;
+}
+#app {
+  color: var(--theme-color);
+  background-color: var(--theme-background-color-default);
+}

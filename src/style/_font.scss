@@ -1,0 +1,52 @@
+/** unicode-range
+* 한글 : U+1100-11FF; // KR
+* 한글 : U+3130-318F; // KR(호환용)
+* 한글 : U+AC00-D7AF; // KR(글자마디)
+* 영문 : U+0020-007E; >>>> U+0041-005A, U+0061-007A; // EN
+* 영문 : U+0041-005A // EN(대)
+* 영문 : U+0061-007A // EN(소)
+* 숫자 : U+0030-0039; // NUMBER
+* 구두점 : U+2000-206F; // ETC
+* 연산자 : U+2200-22FF; // SYMBOL
+* 콤마 : U+002C; // SYMBOL포함
+* 한글 + 숫자 : U+AC00-D7AF, U+0030-0039; // KR+NUMBER
+* 영문 + 숫자 : U+0041-005A, U+0061-007A, U+0030-0039; // EN+NUMBER
+* 영문 + 숫자 + 연산자 : U+0041-005A, U+0061-007A, U+0030-0039, U+2200-22FF, U+002C; // EN+NUMBER+SYMBOL
+* 한글 + 구두점 : U+1100-11FF, U+3130-318F, U+AC00-D7AF, U+2000-206F; // KR+ETC
+
+* @include fontface('폰트명','굵기','경로','범위');
+*/
+// @include fontface('DIN-Alternate_Regular', 400, './fonts/DIN_Alternate_0.woff', null);
+// @include fontface('Instrument 2', 400, './fonts/Instrument2.0-Regular-v5.otf', 'NUMBER');
+@include fontface('Noto Sans CJK KR', 300, './fonts/NotoSansKR-Light.otf', null);
+@include fontface('Noto Sans CJK KR', 400, './fonts/NotoSansKR-Regular.otf', null);
+@include fontface('Noto Sans CJK KR', 500, './fonts/NotoSansKR-Medium.otf', null);
+@include fontface('Noto Sans CJK KR', 700, './fonts/NotoSansKR-Bold.otf', null);
+
+// @include breakpoint($aurora) {
+
+// }
+// @include breakpoint($ecarxP) {
+//     @include fontface('Noto Sans CJK KR', 300, './fonts/NotoSansKR-Light.otf', 'KR+ETC');
+//     @include fontface('Noto Sans CJK KR', 400, './fonts/NotoSansKR-Regular.otf', 'KR+ETC');
+//     @include fontface('Noto Sans CJK KR', 500, './fonts/NotoSansKR-Medium.otf', 'KR+ETC');
+//     @include fontface('Noto Sans CJK KR', 700, './fonts/NotoSansKR-Bold.otf', 'KR+ETC');
+//     @include fontface('Volvo Novum', 400, './fonts/VolvoNovum-Regular.otf', 'EN+NUMBER');
+//     @include fontface('Volvo Novum', 500, './fonts/VolvoNovum-Medium.otf', 'EN+NUMBER');
+// }
+// @include breakpoint($ecarx) {
+//     @include fontface('Noto Sans CJK KR', 300, './fonts/NotoSansKR-Light.otf', 'KR+ETC');
+//     @include fontface('Noto Sans CJK KR', 400, './fonts/NotoSansKR-Regular.otf', 'KR+ETC');
+//     @include fontface('Noto Sans CJK KR', 500, './fonts/NotoSansKR-Medium.otf', 'KR+ETC');
+//     @include fontface('Noto Sans CJK KR', 700, './fonts/NotoSansKR-Bold.otf', 'KR+ETC');
+//     @include fontface('Polestar Unica77', 400, './fonts/PolestarUnica77-Regular.otf', 'EN+NUMBER+SYMBOL');
+//     @include fontface('Polestar Unica77', 500, './fonts/PolestarUnica77-Medium.otf', 'EN+NUMBER+SYMBOL');
+// }
+// @include breakpoint($icup1Volvo) {
+//     @include fontface('Noto Sans CJK KR', 300, './fonts/NotoSansKR-Light.otf', 'KR');
+//     @include fontface('Noto Sans CJK KR', 400, './fonts/NotoSansKR-Regular.otf', 'KR');
+//     @include fontface('Noto Sans CJK KR', 500, './fonts/NotoSansKR-Medium.otf', 'KR');
+//     @include fontface('Noto Sans CJK KR', 700, './fonts/NotoSansKR-Bold.otf', 'KR');
+//     @include fontface('Polestar Unica77', 400, './fonts/PolestarUnica77-Regular.otf', 'EN+NUMBER');
+//     @include fontface('Polestar Unica77', 500, './fonts/PolestarUnica77-Medium.otf', 'EN+NUMBER');
+// }
