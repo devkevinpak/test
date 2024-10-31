@@ -1,7 +1,6 @@
 <template>
   <div>
-    <div id="waveda"></div>
-    <div id="testset"></div>
+    <div id="wave"></div>
   </div>
 </template>
 <script>
@@ -50,20 +49,12 @@ export default {
     }
   },
   mounted () {
-    this.makeCanvas('waveda', '#ff9900')
-
-    let gggg = document.getElementById('testset');
-    let gl = gggg.getContext('webgl') || gggg.getContext("experimental-webgl");
-    gl.clearColor(0,0,0.8,1);
-    gl.clear();
+    this.makeCanvas('wave', '#ff9900')
   }
 }
 </script>
 <style lang="scss" scoped >
-#waveda {
-  height: 400px;
-}
-#testset {
+#wave {
   height: 400px;
 }
 </style>

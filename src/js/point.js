@@ -6,7 +6,7 @@ export class Point {
     this.speed = speed
     this.cur = index
     // this.max = Math.random() * 100 + 50
-    this.max = 90
+    this.max = y
   }
 
   update() {

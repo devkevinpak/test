@@ -1,10 +1,10 @@
-import { Point } from './point.js';
+import {Point} from './point.js';
 
 export class Wave {
   constructor(color) {
     this.color = color
     this.points = []
-    this.numberOfPoints = 9
+    this.numberOfPoints = 6
     this.speed = .02
   }
 
@@ -48,21 +48,14 @@ export class Wave {
         this.points[i].update()
       }
     }
-    // ctx.lineTo(prevX, prevY)
-    // ctx.lineTo(this.stageWidth, this.stageHeight)
-    // ctx.lineTo(0, this.stageHeight)
-    // ctx.lineTo(this.points[0].x, this.points[0].y)
-
-    // /* 색상 RED & 채우기 */
-    // ctx.fillStyle = this.color
-    // ctx.fill()
-
     ctx.lineTo(prevX, prevY)
-    ctx.lineTo(this.stageWidth, this.stageHeight / 2)
+    ctx.lineTo(this.stageWidth, this.stageHeight)
+    ctx.lineTo(0, this.stageHeight)
+    ctx.lineTo(this.points[0].x, this.points[0].y)
 
-    ctx.strokeStyle = "#990099"
-    ctx.lineWidth = 2
-    ctx.stroke()
+    /* 색상 RED & 채우기 */
+    ctx.fillStyle = this.color
+    ctx.fill()
 
     ctx.closePath()
   }

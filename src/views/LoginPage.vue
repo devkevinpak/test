@@ -9,6 +9,7 @@
 export default {
   methods: {
     changeLogin() {
+      window.localStorage.setItem('isLogin', true)
       this.$store.commit('isLogin', true)
     }
   }
