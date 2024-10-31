@@ -7,7 +7,7 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "dev": "vue-cli-service serve",
-    "g:push": "sh -c 'git add . && git commit -m \"$1\" && git push origin hyunwon' --"
+    "g:push": "sh -c 'git add . && git commit -m \"$npm_config_message\" && git push origin hyunwon' --"
   },
   "dependencies": {
     "core-js": "^3.8.3",
