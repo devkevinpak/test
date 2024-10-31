@@ -1,7 +1,7 @@
 <template>
   <div>
     <h3>NeedLogin</h3>
-    <div class="">git push test try 2</div>
+    <div class="">git push test try 4</div>
     <button @click="changeLogin">로그인</button>
   </div>
 </template>
