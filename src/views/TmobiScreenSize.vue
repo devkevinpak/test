@@ -3,17 +3,7 @@
     <h1>TMOBI SCREEN SIZE</h1>
     <div class="range_frame">
       <div class="range_frame_bg">
-        <div class="point"></div>.
-
-        <div
-        @click="handleClick"
-        @touchStart="handleTouchStart"
-        @touchEnd="handleTouchEnd"
-        @touchMove="handleTouchMove"
-        class="test_button_area"
-      >
-        area
-      </div>
+        <div class="point"></div>
       </div>
       <div
         v-for="(device, index) in screenSize"
@@ -48,21 +38,8 @@ export default {
   components: {
   },
   computed: {
-
   },
   methods: {
-    handleClick(event) {
-      console.log("클릭:", event);
-    },
-    handleTouchStart(event) {
-      console.log("터치 시작:", event.touches[0].clientX, event.touches[0].clientY);
-    },
-    handleTouchMove(event) {
-      console.log("터치 이동 중:", event.touches[0].clientX, event.touches[0].clientY);
-    },
-    handleTouchEnd(event) {
-      console.log("터치 종료");
-    },
   }
 }
 </script>
@@ -72,12 +49,12 @@ export default {
   .range_frame_bg {
     position: absolute;
     inset: 0;
-    background-color: rgba(0,0,0,.2);
   }
 }
 .device_range_tranck {
   width: 2500px;
   background-color: rgba(0,0,0,.2);
+  margin-bottom: 10px;
   .device_range {
     height: 10px;
     background-color: red;
