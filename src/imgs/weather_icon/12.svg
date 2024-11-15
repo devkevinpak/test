@@ -1,0 +1,13 @@
+<svg width="242" height="240" viewBox="0 0 242 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g opacity=".1" filter="url(#cqcdlrpyfa)">
+        <rect x="47" y="47" width="146.449" height="146.449" rx="73.224" fill="#CCDCE2"/>
+    </g>
+    <path d="M68.664 110.469v24.661M79.344 128.969l-21.357-12.331M79.344 116.641l-21.357 12.33M120.531 110.469v24.661M131.211 128.969l-21.357-12.331M131.211 116.641l-21.357 12.33M172.398 110.469v24.661M183.078 128.969l-21.357-12.331M183.078 116.641l-21.357 12.33M94.898 60.422v24.66M105.578 78.922l-21.357-12.33M105.578 66.586l-21.357 12.33M146.781 60.422v24.66M157.461 78.922l-21.357-12.33M157.461 66.586l-21.357 12.33M94.898 160.492v24.661M105.578 178.984l-21.357-12.33M105.578 166.656l-21.357 12.331M146.781 160.492v24.661M157.461 178.984l-21.357-12.33M157.461 166.656l-21.357 12.331" stroke="#fff" stroke-width="6.102" stroke-linecap="square"/>
+    <defs>
+        <filter id="cqcdlrpyfa" x="-.596" y="-.596" width="241.641" height="241.637" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+            <feGaussianBlur stdDeviation="23.798" result="effect1_foregroundBlur_15344_690481"/>
+        </filter>
+    </defs>
+</svg>

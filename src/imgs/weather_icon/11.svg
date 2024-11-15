@@ -1,0 +1,30 @@
+<svg width="228" height="213" viewBox="0 0 228 213" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g opacity=".2" filter="url(#5mqq4xvbya)">
+        <rect x="45" y="140" width="137.906" height="28" rx="14" fill="#CCDCE2"/>
+    </g>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M179.865 97.33c0 15.832-12.834 28.666-28.665 28.667V126H69.5c-11.874 0-21.5-9.626-21.5-21.5 0-8.843 5.34-16.44 12.97-19.741a42.934 42.934 0 0 1-.072-2.476C60.898 58.931 79.83 40 103.182 40c18.968 0 35.018 12.49 40.377 29.693a28.698 28.698 0 0 1 7.639-1.029c15.832 0 28.667 12.835 28.667 28.667z" fill="url(#nnpv31gewb)"/>
+    <g filter="url(#3h47075xrc)" stroke="#fff" stroke-width="5.073" stroke-linecap="square">
+        <path d="M70.875 142.367v20.504M79.752 157.742 61.995 147.49M79.752 147.492l-17.757 10.252M113.992 142.367v20.504M122.869 157.742l-17.757-10.252M122.869 147.492l-17.757 10.252M157.125 142.367v20.504M166.002 157.742l-17.757-10.252M166.002 147.492l-17.757 10.252"/>
+    </g>
+    <defs>
+        <filter id="5mqq4xvbya" x=".102" y="95.102" width="227.703" height="117.797" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+            <feGaussianBlur stdDeviation="22.449" result="effect1_foregroundBlur_15344_690613"/>
+        </filter>
+        <filter id="3h47075xrc" x="54.529" y="135.828" width="118.938" height="33.578" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+            <feOffset/>
+            <feGaussianBlur stdDeviation="2"/>
+            <feComposite in2="hardAlpha" operator="out"/>
+            <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+            <feBlend in2="BackgroundImageFix" result="effect1_dropShadow_15344_690613"/>
+            <feBlend in="SourceGraphic" in2="effect1_dropShadow_15344_690613" result="shape"/>
+        </filter>
+        <linearGradient id="nnpv31gewb" x1="78" y1="61" x2="145.5" y2="169.5" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#E0E0E0"/>
+            <stop offset=".859" stop-color="#A4A4A4"/>
+        </linearGradient>
+    </defs>
+</svg>

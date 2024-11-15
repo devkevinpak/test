@@ -1,0 +1,35 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_27_290)">
+<g opacity="0.1" filter="url(#filter0_f_27_290)">
+<path d="M178 100C178 143.078 143.078 178 100 178C56.922 178 22 143.078 22 100C22 56.922 56.922 22 100 22C143.078 22 178 56.922 178 100Z" fill="#FFE600"/>
+</g>
+<path d="M161.859 99.851C161.859 134.097 134.097 161.859 99.851 161.859C65.606 161.859 37.844 134.097 37.844 99.851C37.844 65.606 65.606 37.844 99.851 37.844C134.097 37.844 161.859 65.606 161.859 99.851Z" fill="url(#paint0_linear_27_290)"/>
+<g opacity="0.2" filter="url(#filter1_f_27_290)">
+<path d="M104.121 41.2729H95.578C63.5626 41.2729 37.609 67.2266 37.609 99.2419C37.609 131.257 63.5626 157.211 95.578 157.211H104.121C136.136 157.211 162.09 131.257 162.09 99.2419C162.09 67.2266 136.136 41.2729 104.121 41.2729Z" fill="#FFEF9A"/>
+</g>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M111.598 156.998C111.598 168.596 102.197 177.997 90.6 177.998V178H30.75C22.052 178 15 170.948 15 162.25C15 155.772 18.911 150.207 24.501 147.788C24.4661 147.184 24.4487 146.58 24.449 145.975C24.449 128.868 38.317 115 55.424 115C69.319 115 81.077 124.149 85.003 136.752C86.8256 136.25 88.7076 135.997 90.598 135.998C102.196 135.998 111.598 145.4 111.598 156.998Z" fill="url(#paint1_linear_27_290)"/>
+</g>
+<defs>
+<filter id="filter0_f_27_290" x="20" y="20" width="160" height="160" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="1" result="effect1_foregroundBlur_27_290"/>
+</filter>
+<filter id="filter1_f_27_290" x="-23.411" y="-19.7471" width="246.521" height="237.978" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="30.51" result="effect1_foregroundBlur_27_290"/>
+</filter>
+<linearGradient id="paint0_linear_27_290" x1="90.433" y1="133.602" x2="141.451" y2="44.123" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FF9900"/>
+<stop offset="1" stop-color="#FFEE94"/>
+</linearGradient>
+<linearGradient id="paint1_linear_27_290" x1="60.807" y1="137.224" x2="60.807" y2="177.999" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F3F3F3"/>
+<stop offset="1" stop-color="#CDCDCD"/>
+</linearGradient>
+<clipPath id="clip0_27_290">
+<rect width="200" height="200" fill="white"/>
+</clipPath>
+</defs>
+</svg>
