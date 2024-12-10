@@ -4,6 +4,9 @@ import AppPlugin from './plugin'
 import store from './store'
 import router from './router'
 import './style/common.scss'
+import eventBus from './js/eventBus'
+
+Vue.prototype.$eventBus = eventBus
 
 // const AppUi = Vue.observable({
 //   count: 0

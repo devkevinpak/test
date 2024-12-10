@@ -13,6 +13,8 @@ import TrigonometryPage from '@/views/TrigonometryPage.vue'
 import WebglPage from '@/views/WebglPage.vue'
 import InsertHtmlPage from '@/views/InsertHtmlPage.vue'
 import GuiBorderPage from '@/views/GuiBorderPage.vue'
+import TestPage from '@/views/TestPage.vue'
+import ContainerQuery from '@/views/ContainerQuery.vue'
 import LoginPage from '@/views/LoginPage.vue'
 
 export const PAGES = {
@@ -28,6 +30,8 @@ export const PAGES = {
   WEBGL: 'WebglPage',
   INSERTHTML: 'InsertHtmlPage',
   GUIBORDER: 'GuiBorderPage',
+  TESTPAGE: 'TestPage',
+  CONTAINERQUERY: 'ContainerQuery',
   LOGIN: 'LoginPage'
 }
 
@@ -44,6 +48,8 @@ export const routes = [
   { name: PAGES.WEBGL, path: '/Webgl', component: WebglPage, meta: { title: 'Webgl' } },
   { name: PAGES.INSERTHTML, path: '/InsertHtml', component: InsertHtmlPage, meta: { title: 'InsertHtml' } },
   { name: PAGES.GUIBORDER, path: '/GuiBorder', component: GuiBorderPage, meta: { title: 'GuiBorder' } },
+  { name: PAGES.TESTPAGE, path: '/TestPage', component: TestPage, meta: { title: 'TestPage' } },
+  { name: PAGES.CONTAINERQUERY, path: '/ContainerQuery', component: ContainerQuery, meta: { title: 'ContainerQuery' } },
   { name: PAGES.LOGIN, path: '/Login', component: LoginPage, meta: { title: 'Login' } }
 ]
 

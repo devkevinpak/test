@@ -105,18 +105,18 @@ $lineCount: 6;
   }
 }
 @mixin waves($index, $rNumber) {
-  $range: (($bundleCount / 2) * -1) + $index;
-  // $rangeDeg: (($bundleCount / 2) * -1) + $index * 10;
+  $range: #{(($bundleCount * .5) * -1 + $index)};
+  // $rangeDeg: (($bundleCount * .5) * -1) + $index * 10;
   .waves:nth-child(#{$index}) {
-    $odd: translate3d($range + ($size / 2), #{($size / 2) - ($size * ($rNumber / 2 * .01))}, 0) rotate3D(0,1,0, $range + -90deg);
-    $even: translate3d($range + ($size / 2), #{($size / 2) - ($size * ($rNumber / 2 * .01))}, 0) rotate3D(1,0,1, $range + -180deg);
+    $odd: translate3d($range + ($size * .5), #{($size * .5) - ($size * ($rNumber * .5 * .01))}, 0) rotate3d(0,1,0, #{$range + -90}deg);
+    $even: translate3d($range + ($size * .5), #{($size * .5) - ($size * ($rNumber * .5 * .01))}, 0) rotate3D(1,0,1, #{$range + -180}deg);
     height: $rNumber + -4%;
     @if not ($index%2 == 0) {
       transform: $odd;
     } @else {
       transform: $even;
     }
-    // transform: translate3d($range + ($size / 2), #{($size / 2) - ($size * (($rNumber + 20) / 2 * .01))}, 0) rotateY($range + -90deg);
+    // transform: translate3d($range + ($size * .5), #{($size * .5) - ($size * (($rNumber + 20) * .5 * .01))}, 0) rotateY($range + -90deg);
   }
 }
 @mixin wavesLine($bundleIndex, $lineIndex, $rNumber) {

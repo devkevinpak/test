@@ -1,8 +1,46 @@
 <template>
   <div>
+    <div class="explain">
+      <h1>문제</h1>
+      <ul>
+        <li>기본 세팅문제</li>
+        <li>제플린 그대로 사용</li>
+        <li>레이아웃 설정(자식요소가 부모요소보다 큰경우 존재)</li>
+      </ul>
+      <h1>반응형 처리시</h1>
+      <ul>
+        <li>공통으로 사용되는 프로젝트 테마컬러,사이즈,단위 체크</li>
+      </ul>
+      <h1>REM</h1>
+      <ul>
+        <li>font-size: 62.5%; /* 62.5% of the default 16px = 10px */</li>
+        <li>
+          <ul>
+            <li>16px → 1.6rem</li>
+            <li>24px → 2.4rem</li>
+            <li>32px → 3.2rem</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="container text-center">
+      <div class="row">
+        <div class="col">
+          Column
+        </div>
+        <div class="col">
+          Column
+        </div>
+        <div class="col">
+          Column
+        </div>
+      </div>
+    </div>
+
     <h1 class="mb32">Grid Layout
       <div class="btn" @click="randomWidth">random width(only XL size)</div>
       <div class="btn" @click="randomOrder">random Order</div>
+      <div class="btn" @click="changeGapMethod">change</div>
     </h1>
 
     <div ref="gridWrap">
@@ -209,6 +247,25 @@ export default {
         classList.forEach(className => {
           if (/^col_xl_\d+$/.test(className)) {
             const newClassName = `col_xl_${this.getRandomWidthNumber()}`
+            node.classList.replace(className, newClassName)
+          }
+        })
+      })
+      // gridArr.map(grid => grid.replace(/\.col_lg_\d+/g, ''))
+    },
+    changeGapMethod () {
+      const gridNodes = this.$refs.gridWrap.querySelectorAll('.row')
+      gridNodes.forEach(node => {
+        const classList = Array.from(node.classList)
+        classList.forEach(className => {
+          if (/^row_gap_\d+$/.test(className)) {
+            const gapNumber = className.match(/row_gap_(\d+)/)[1]
+            const newClassName = `row_flex_gap_${gapNumber}`
+            node.classList.replace(className, newClassName)
+          }
+          if (/^row_flex_gap_\d+$/.test(className)) {
+            const gapNumber = className.match(/row_flex_gap_(\d+)/)[1]
+            const newClassName = `row_gap_${gapNumber}`
             node.classList.replace(className, newClassName)
           }
         })

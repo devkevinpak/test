@@ -12,7 +12,6 @@
   </div>
 </template>
 <script>
-import { SCROLL_EVENTS } from '@/js/eventBus'
 export default {
   props: {
     height: {
@@ -68,44 +67,44 @@ export default {
       }
     },
     mouseDownHandler(e) {
-      console.log('aspaosjgoiajgso')
-      this.$eventBus.emit(SCROLL_EVENTS.SCROLL_START);
+      this.createScrollIsActive()
 
-      const ele = this.$refs.scroll;
+      let target = this.$refs.scroll
       this.pos = {
-        left: ele.scrollLeft,
-        top: ele.scrollTop,
+        top: target.scrollTop,
+        left: target.scrollLeft,
         x: e.clientX,
-        y: e.clientY,
-      };
-
-      document.addEventListener('mousemove', this.mouseMoveHandler);
-      document.addEventListener('mouseup', this.mouseUpHandler);
+        y: e.clientY
+      }
+      document.addEventListener('mousemove', this.mouseMoveHandler)
+      document.addEventListener('mouseup', this.mouseUpHandler)
+      // this.throttle(async () => {
+      // }, 100)
     },
     mouseMoveHandler(e) {
-      const dx = e.clientX - this.pos.x;
-      const dy = e.clientY - this.pos.y;
-
-      this.$refs.scroll.scrollTop = this.pos.top - dy;
-      this.$refs.scroll.scrollLeft = this.pos.left - dx;
+      console.log('move')
+      let target = this.$refs.scroll
+      const dx = e.clientX - this.pos.x
+      const dy = e.clientY - this.pos.y
+      target.scrollTop = this.pos.top - dy
+      target.scrollLeft = this.pos.left - dx
     },
     mouseUpHandler() {
-      this.$eventBus.emit(SCROLL_EVENTS.SCROLL_END);
-
-      document.removeEventListener('mousemove', this.mouseMoveHandler);
-      document.removeEventListener('mouseup', this.mouseUpHandler);
+      document.removeEventListener('mousemove', this.mouseMoveHandler)
+      document.removeEventListener('mouseup', this.mouseUpHandler)
+    },
+    throttle (func, delay) {
+      if (!this.timerForThrottle) {
+        this.timerForThrottle = setTimeout(() => {
+          func()
+          this.timerForThrottle = null
+        }, delay)
+      }
     }
   },
-  mounted() {
-    this.createScrollIsActive();
-    this.preventChildScroll();
-    window.addEventListener('resize', () => {
-      if (this.timerForThrottle) return;
-      this.timerForThrottle = setTimeout(() => {
-        this.createScrollIsActive();
-        this.timerForThrottle = null;
-      }, 300);
-    });
+  activated() {
+    console.log('activated')
+    this.createScrollIsActive()
   }
 }
 </script>
